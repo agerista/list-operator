@@ -27,8 +27,11 @@ def custom_len(input_list):
 
     """
 
-    return 0
+    count = 0
 
+    for i in input_list:
+        count += 1
+    return count
 
 # For the next four exercises, you'll need to be clever and think about ways
 # to use "list slice assignment" to solve these problems.
@@ -54,8 +57,9 @@ def custom_append(input_list, value):
         True
 
     """
-
-    pass
+    index = custom_len(input_list)
+    new_list[index:index] = [value]
+    return None
 
 
 def custom_extend(input_list, second_list):
